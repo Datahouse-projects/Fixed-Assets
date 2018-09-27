@@ -13,7 +13,7 @@ class CreateDepreciationHistoryTables extends Migration
      */
     public function up()
     {
-        Schema::create('depreciation', function (Blueprint $table) {
+        Schema::create('depreciation_history', function (Blueprint $table) {
             $table->increments('id');
             $table->string('current_dp');
             $table->string('accumulated_dp');

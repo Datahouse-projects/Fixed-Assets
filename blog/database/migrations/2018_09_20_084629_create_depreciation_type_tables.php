@@ -15,7 +15,7 @@ class CreateDepreciationTypeTables extends Migration
     {
         Schema::create('depreciation_type', function (Blueprint $table) {
 
-            $table->integer('dp_type_id');
+            $table->increments('dp_type_id');
             $table->integer('current_dp');
             $table->integer('old_value');
             $table->string('dp_status');

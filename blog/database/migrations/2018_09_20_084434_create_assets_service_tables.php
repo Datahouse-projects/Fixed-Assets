@@ -13,7 +13,7 @@ class CreateAssetsServiceTables extends Migration
      */
     public function up()
     {
-        Schema::create('service', function (Blueprint $table) {
+        Schema::create('assets_service', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('last_service');
             $table->integer('service_cost');

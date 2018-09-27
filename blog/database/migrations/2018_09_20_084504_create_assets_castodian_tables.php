@@ -13,8 +13,8 @@ class CreateAssetsCastodianTables extends Migration
      */
     public function up()
     {
-        Schema::create('castodian', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('assetd_castodian', function (Blueprint $table) {
+            $table->increments('castodian_id');
             $table->integer('asset_barcode');
 
             $table->integer('asset_rfid');
