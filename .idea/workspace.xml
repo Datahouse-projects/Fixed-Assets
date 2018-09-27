@@ -22,26 +22,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018_09_20_084528_create_assets_vendor_tables.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084528_create_assets_vendor_tables.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018_09_20_084338_create_depreciation_history_tables.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084338_create_depreciation_history_tables.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="2018_09_20_084504_create_assets_castodian_tables.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084504_create_assets_castodian_tables.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -95,8 +75,28 @@
       <file leaf-file-name="2018_09_20_084727_create_assets_tables.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084727_create_assets_tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+            <state relative-caret-position="325">
+              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/blog/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2856">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018_09_20_084727_create_assets_tables.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/blog/database/migrations/2018_09_20_084727_create_assets_tables.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-255">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -366,12 +366,12 @@
       <option name="presentableId" value="Default" />
       <updated>1537541128150</updated>
       <workItem from="1537541132559" duration="2508000" />
-      <workItem from="1538029338205" duration="3780000" />
+      <workItem from="1538029338205" duration="4080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6288000" />
+    <option name="totallyTimeSpent" value="6588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -529,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084705_create_assets_class_tables.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084434_create_assets_service_tables.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -577,10 +569,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/blog/database/migrations/2018_09_20_084727_create_assets_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084705_create_assets_class_tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/blog/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2856">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blog/database/migrations/2018_09_20_084727_create_assets_tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        <state relative-caret-position="325">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
           <folding />
         </state>
       </provider>
