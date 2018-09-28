@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Supervisor extends Model
+class Castodian extends Model
 {
     protected $fillable = [
-        'name',
+        'asset_rfid', 'asset_serial_no', 'asset_barcode'
     ];
 
     /**
@@ -15,5 +15,6 @@ class Supervisor extends Model
      *
      * @var array
      */
+
 
 }

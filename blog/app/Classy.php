@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Supervisor extends Model
+class Classy extends Model
 {
+    //
     protected $fillable = [
-        'name',
+        'name', 'description',
     ];
 
     /**

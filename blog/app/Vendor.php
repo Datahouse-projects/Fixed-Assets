@@ -4,10 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Supervisor extends Model
+class Vendor extends Model
 {
     protected $fillable = [
-        'name',
+        'vendor_name',
     ];
 
     /**

@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Supervisor extends Model
+class Service extends Model
 {
+    //
     protected $fillable = [
-        'name',
+        'last_service', 'service_cost', 'service_provider',
     ];
 
     /**
