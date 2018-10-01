@@ -12,8 +12,15 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('models')->insert([
-            'name' => str_random(1),
+     // 'name' => str_random(9),
+            'name'=>'john',
+            'name'=>'john',
+            'name'=>'john',
 
         ]);
     }
 }
+
+
+
+
