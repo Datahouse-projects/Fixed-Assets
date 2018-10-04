@@ -13,7 +13,7 @@ class Assets_serviceController extends Controller
      */
     public function index()
     {
-        //
+        return view('Services.index');
     }
 
     /**

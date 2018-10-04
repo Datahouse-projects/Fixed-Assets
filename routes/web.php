@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('/assets','AssetsController');
+Route::get("create",'Asset_locationController@index');
+Route::post("store",'Asset_locationController@store');
 Route::resource('/models','Asset_modelController');
 Route::resource('/location','Asset_locationController');
 Route::resource('supervisors','SupervisorController');
@@ -23,4 +25,7 @@ Route::resource('services','Asset_serviceController');
 Route::resource('depreciation_types','Depreciation_typeController');
 Route::resource('classes','Asset_classController');
 Route::resource('castodians','Asset_castodianController');
-Route::resource('vendors','Asset_vendorController');
+Route::resource('/vendors','Assets_vendorController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

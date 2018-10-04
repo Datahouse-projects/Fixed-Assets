@@ -13,6 +13,7 @@ class Assets_vendorController extends Controller
      */
     public function index()
     {
+        return view('Vendors.index');
         //
     }
 

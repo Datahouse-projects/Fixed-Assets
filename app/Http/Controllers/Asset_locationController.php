@@ -13,7 +13,7 @@ class Asset_locationController extends Controller
      */
     public function index()
     {
-        //
+        return view('create');
     }
 
     /**
@@ -23,7 +23,7 @@ class Asset_locationController extends Controller
      */
     public function create()
     {
-        //
+        return 'Location';
     }
 
     /**
@@ -34,6 +34,7 @@ class Asset_locationController extends Controller
      */
     public function store(Request $request)
     {
+        return 'Location';
         //
     }
 

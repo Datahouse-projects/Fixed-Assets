@@ -13,7 +13,7 @@ class Assets_classController extends Controller
      */
     public function index()
     {
-        //
+        return view('Class.index');
     }
 
     /**

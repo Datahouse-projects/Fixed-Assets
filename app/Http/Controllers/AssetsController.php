@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Asset;
 use Illuminate\Http\Request;
 
 class AssetsController extends Controller
@@ -24,6 +25,7 @@ class AssetsController extends Controller
      */
     public function create()
     {
+
         //
     }
 
@@ -35,6 +37,7 @@ class AssetsController extends Controller
      */
     public function store(Request $request)
     {
+        
         //
     }
 
