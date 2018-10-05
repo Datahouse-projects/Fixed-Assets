@@ -13,7 +13,7 @@ class Depreciation_typeController extends Controller
      */
     public function index()
     {
-        return view('vendors.index');
+        return view('Depreciation.index');
     }
 
     /**

@@ -13,7 +13,7 @@ class Assets_castodianController extends Controller
      */
     public function index()
     {
-        return view('Castodians.index');
+        return view('Castodian.index');
     }
 
     /**

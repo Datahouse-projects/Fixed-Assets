@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Asset;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AssetsController extends Controller
 {
@@ -14,6 +15,7 @@ class AssetsController extends Controller
      */
     public function index()
     {
+    $assets=Asset::all();
         return view('Assets.index');
         //
     }
@@ -37,8 +39,13 @@ class AssetsController extends Controller
      */
     public function store(Request $request)
     {
-        
-        //
+       // $name=$request->input('name');
+        //$size=$request->input('size');
+        DB::table('assets')->insert(
+
+            //['name' => $name]
+            //'size' => $size]
+        );
     }
 
     /**
@@ -49,7 +56,7 @@ class AssetsController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('Assets.show');
     }
 
     /**

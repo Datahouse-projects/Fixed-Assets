@@ -16,8 +16,6 @@ class CreateAssetsTable extends Migration
         Schema::create('assets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('class_id')->unsigned();
-            $table->foreign('class_id')->references('id')->on('classes');
 
             $table->integer('service_id')->unsigned();
             $table->foreign('service_id')->references('id')->on('services');
@@ -44,6 +42,9 @@ class CreateAssetsTable extends Migration
             $table->integer('last_run_period');
             $table->integer('earn_final_period');
             $table->integer('production_capacity');
+            $table->integer('class_id')->unsigned();
+            $table->foreign('class_id')->references('id')->on('classes');
+
             $table->timestamps();
         });
     }

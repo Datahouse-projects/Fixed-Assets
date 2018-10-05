@@ -2,32 +2,68 @@
 
 @section('content')
 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">{{ __('Depreciation Details') }}</div>
+
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('register') }}">
+                            @csrf
+
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Asset Barcode') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                </div>
+                            </div>
 
 
-      <form class="form" method="POST" action="Asset_locationController@store" >
- <div class="form-group">
-        <label for="full_name" class="col-md-4 control-label" > LOCATION ID</label>
+                            <div class="form-group row">
+                                <label for="size" class="col-md-4 col-form-label text-md-right">Asset RFID</label>
+                                <div class="col-md-6">
+                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-            <input id="location_id" class="col-md-2" type="number" name="full_name" value=" " >
-        </div>
-          <div class="form-group">
-        <label for="asset_name" class="col-md-4 control-label">LOCATION NAME</label>
+                                </div>
+                            </div>
 
-              <input id="location_name" type="text" class="col-md-2" name="asset_name" value=" " >
-        </div>
+                            <div class="form-group row">
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Asset Serial No.') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="name" type="number" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+
+                                </div>
+                            </div>
 
 
-    {{-- SUBMIT BUTTON--}}
-    <div class="form-group">
-        <div class="col-md-9">
-            <button type="submit" class="btn btn-primary">
-                Add Asset Details
-            </button>
+
+
+                            <div class="form-group row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Add Details') }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</form>
+
+
 
 @endsection
+
+
+
+
+
 
 
 
