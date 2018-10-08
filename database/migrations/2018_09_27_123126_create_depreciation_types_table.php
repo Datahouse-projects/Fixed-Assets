@@ -17,7 +17,7 @@ class CreateDepreciationTypesTable extends Migration
             $table->increments('dp_type_id');
             $table->integer('current_dp');
             $table->integer('old_value');
-            $table->integer('dp_ratio');
+            $table->decimal('dp_ratio');
             $table->timestamps();
         });
     }

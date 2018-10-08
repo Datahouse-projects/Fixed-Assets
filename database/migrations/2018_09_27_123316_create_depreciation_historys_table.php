@@ -18,7 +18,7 @@ class CreateDepreciationHistorysTable extends Migration
             $table->string('current_dp');
             $table->string('accumulated_dp');
             $table->date('dp_run_date');
-            $table->integer('dp_ratio');
+            $table->decimal('dp_ratio');
             $table->integer('dp_day');
             $table->integer('dp_year');
             $table->integer('dp_month');
