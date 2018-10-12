@@ -1,7 +1,61 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: DATAHOUSE_PC
- * Date: 9/27/2018
- * Time: 2:19 AM
- */
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div  ALIGN="CENTER" class="card-header">{{ __('ASSET VENDORS') }}</div>
+
+                    <div class="card-body">
+
+                        <form method="POST" action="/vendors">
+                        <table class="table table-striped table-bordered table-hover">
+                            <tr >
+                                <td bgcolor="aqua"><b>VENDOR DETAILS</b></td>
+                            </tr>
+                            <tr >
+                                <td>Vendor Name:<input name="name" type="text" class="form-control" class="col-md-6" ></td>
+                            </tr>
+
+                            <tr >
+                                <td>Phone Contact:<input name="phone" type="number" class="form-control" class="col-md-6" ></td>
+                            </tr>
+                            <tr >
+                                <td>Email:<input name="email" type="text" class="form-control" class="col-md-6" ></td>
+                            </tr>
+
+                            <tr >
+                                <td>Website:<input name="website" type="text" class="form-control" class="col-md-6" ></td>
+                            </tr>
+
+                            <tr >
+                                <td > <button type="submit" class="btn btn-primary">
+                                        {{ __('Submit') }}
+                                    </button>
+                                    <button type="submit" class="btn btn-primary" bgcolor="aqua">
+                                        {{ __('Cancel') }}
+                                    </button></td>
+                            </tr>
+
+
+                        </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+@endsection
+
+
+
+
+

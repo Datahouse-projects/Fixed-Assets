@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Asset;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use function Psy\sh;
 
 class AssetsController extends Controller
 {
@@ -15,8 +16,8 @@ class AssetsController extends Controller
      */
     public function index()
     {
-    $assets=Asset::all();
-        return view('Assets.index');
+       $assets=Asset::all();
+        return view('Assets.index',['assets' => $assets]);
         //
     }
 
@@ -25,10 +26,10 @@ class AssetsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+  return view('Assets.create');
 
-        //
     }
 
     /**
@@ -39,13 +40,49 @@ class AssetsController extends Controller
      */
     public function store(Request $request)
     {
-       // $name=$request->input('name');
-        //$size=$request->input('size');
-        DB::table('assets')->insert(
 
-            //['name' => $name]
-            //'size' => $size]
-        );
+
+
+      //  $asset = new AssetsController();
+
+       // $asset->title = $request->get('name');
+       // $asset->body = $request->get('assets_size');
+     //   $assets->user_id = $request->get('id');
+       // $post->slug = Slug::generateSlug($request->get('title'));
+
+     // $asset->save();
+
+       // return Redirect::route('admin.posts.index');
+     $name=$request->input('name');
+      $cost=$request->input('cost');
+      $size=$request->input('size');
+        $rfid=$request->input('rfid');
+        $barcode=$request->input('barcode');
+        $serial=$request->input('serial');
+        $purchase_date=$request->input('purchase_date');
+        $expire_date=$request->input('expire_date');
+        $renewer_date=$request->input('renewer_date');
+          DB::table('assets')->insert(
+
+        [      'name' => $name,
+             'size' => $size,
+             'cost' => $cost,
+             'purchase_date' => $purchase_date,
+             'expire_date' => $expire_date,
+             'renewer_date' => $renewer_date,
+            'rfid' => $rfid,
+             'barcode' => $barcode,
+             'serial' => $serial,
+
+
+         ]
+
+
+);
+  //$this->show();
+        $assets = Asset::all();
+        return view('Assets.show', ['assets' => $assets]);
+
     }
 
     /**
@@ -54,9 +91,30 @@ class AssetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
+
     {
-        return view('Assets.show');
+
+     return view ('Assets.show');
+       // $assets = Asset::all();
+       // return view('Assets.show', ['assets' => $assets]);
+
+
+
+
+
+
+
+       // $asset_manage = Asset::all();
+        //return view('Assets.show')->with('assets', $asset_manage);
+        //$assets=asset_manage::find($id);
+        //$assets = DB::table('assets')->get();
+        //return view ('Assets.show')->with('records',$assets);
+        //$asset_manage = DB::table('assets')->get();
+        //echo $asset_manage->name;
+
+         //return view('Assets.show', ['assets' => $asset_manage]);
+
     }
 
     /**
@@ -93,3 +151,39 @@ class AssetsController extends Controller
         //
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

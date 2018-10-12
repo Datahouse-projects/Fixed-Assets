@@ -13,7 +13,7 @@ class Asset_locationController extends Controller
      */
     public function index()
     {
-        return view('create');
+        return view('Location.index');
     }
 
     /**

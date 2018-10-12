@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Location;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+       // $assets = Asset::all();
+       // return view('Assets.show', ['assets' => $assets]);
+        $assets = Asset::all();
+
+      //  $assets = DB::table('sub_category')->where('id')->count();
+
+        return view('home', ['assets' => $assets]);
+    }
+    public function show()
+    {
+
+        // $assets = Asset::all();
+        // return view('Assets.show', ['assets' => $assets]);
+        $assets = Asset::all();
+        $location = Location::all();
+
+        //  $assets = DB::table('sub_category')->where('id')->count();
+
+        return view('home', ['assets' => $assets]);
     }
 }

@@ -14,8 +14,8 @@ class CreateCastodiansTable extends Migration
     public function up()
     {
         Schema::create('castodians', function (Blueprint $table) {
-            $table->increments('castodian_id');
-            $table->integer('asset_barcode');
+            $table->increments('id');
+            $table->integer('name');
             $table->integer('asset_rfid');
             $table->integer('asset_serial_no');
             $table->timestamps();

@@ -14,10 +14,12 @@ class CreateDepreciationTypesTable extends Migration
     public function up()
     {
         Schema::create('depreciation_types', function (Blueprint $table) {
-            $table->increments('dp_type_id');
-            $table->integer('current_dp');
-            $table->integer('old_value');
+            $table->increments('id');
+            //$table->integer('current_dp');
+            //$table->integer('old_value');
             $table->decimal('dp_ratio');
+            $table->string('name');
+            $table->string('description');
             $table->timestamps();
         });
     }

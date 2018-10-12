@@ -1,75 +1,117 @@
+@extends('layouts.app')
+
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Register') }}</div>
+                    <div  ALIGN="CENTER" class="card-header">{{ __('Asset Details') }}</div>
 
                     <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
+                        <form method="POST" action="/assets">
                             @csrf
 
                             <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Asset Name') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                    <input name="name" type="text" class="form-control" name="name" >
 
-                                    @if ($errors->has('name'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-                                    @endif
+                                </div>
+                            </div><div class="form-group row">
+                                <label for="size" class="col-md-4 col-form-label text-md-right">Size</label>
+                                <div class="col-md-6">
+                                    <input name="size" type="number" class="form-control">
+
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                                <label for="cost" class="col-md-4 col-form-label text-md-right">{{ __('Asset Cost') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
+                                    <input name="cost" type="number" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  required autofocus>
 
-                                    @if ($errors->has('email'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                    @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                                <label for="purdate" class="col-md-4 col-form-label text-md-right">{{ __('Date Purchased') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                    <input name="purchase_date" type="date" class="form-control"  required autofocus>
 
-                                    @if ($errors->has('password'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                    @endif
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                                <label for="expdate" class="col-md-4 col-form-label text-md-right">{{ __('Exipire Date') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                                    <input name="expire_date" type="date" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  required autofocus>
+
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label for="rendate" class="col-md-4 col-form-label text-md-right">{{ __('Renewer Date') }}</label>
+
+                                <div class="col-md-6">
+                                    <input name="renewer_date" type="date" class="form-control" required autofocus>
+
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="rfid" class="col-md-4 col-form-label text-md-right">{{ __('Asset RFID') }}</label>
+
+                                <div class="col-md-6">
+                                    <input name="rfid" type="date" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  required autofocus>
+
+                                </div>
+                            </div>
+                                                       <div class="form-group row">
+                                <label for="barcode" class="col-md-4 col-form-label text-md-right">{{ __('Asset Barcode') }}</label>
+
+                                <div class="col-md-6">
+                                    <input name="barcode" type="date" class="form-control" required autofocus>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="serial" class="col-md-4 col-form-label text-md-right">{{ __('Asset Serial') }}</label>
+
+                                <div class="col-md-6">
+                                    <input name="serial" type="date" class="form-control" required autofocus>
+
+                                </div>
+                            </div>
+
 
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
+                                        {{ __('Add Assets Details') }}
                                     </button>
                                 </div>
                             </div>
-                        </form>
+
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+
+
+
+
+
+
 @endsection
+
+
+
+
+
