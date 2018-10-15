@@ -16,27 +16,27 @@
 
                     <table class="table table-striped table-bordered table-hover">
 
-                        <tr >
+                        <tr ><td>Serial No.</td>
                             <td> Asset name</td>
-                            <td>Size</td>
+                            <td>Asset Type</td>
                             <td>cost</td>
-                            <td>Date Purchased</td>
-                            <td>Date Exipired</td><td>Date Renewered</td>
-                            <td>Asset RFID</td>
-                            <td>Asset Barcode</td><td>Serial No.</td>
+                            <td>Manufacture</td>
+                            <td>Status</td>
                         </tr>
                         @foreach($assets as $assets)
                             <tr>
+                                <td> {{ $assets->serial }}</td>
                                 <td> {{ $assets->name }}</td>
-                                <td> {{ $assets->size }}</td>
+                                <td> {{ $assets->type}}</td>
                                 <td> {{ $assets->cost }}</td>
-                                <td> {{ $assets->purchase_date }}</td>
-                                <td>{{ $assets->expire_date }}</td>
-                                <td>{{ $assets->renewer_date }}</td>
+                                <td> {{ $assets->manufacture }}</td>
+                                <td> {{ $assets->status }}</td>
+                                <td> View</td>
+                                <td> Delete</td>
 
-                                <td> {{ $assets->rfid }}</td>
-                                <td>{{ $assets->barcode }}</td>
-                                <td>{{ $assets->serial }}</td>
+
+
+
 
                             </tr>
                         @endforeach

@@ -24,6 +24,16 @@ class CreateAssetsTable extends Migration
             $table->date('barcode');
             $table->date('rfid');
             $table->date('serial');
+            $table->string('manufacture');
+            $table->integer('model');
+            $table->string('status');
+            $table->string('condition');
+            $table->string('type');
+            $table->integer('old');
+            $table->integer('expected');
+
+
+
 
             $table->timestamps();
         });

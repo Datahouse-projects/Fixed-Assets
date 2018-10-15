@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Asset;
 
 use Illuminate\Http\Request;
 
@@ -13,7 +14,8 @@ class Depreciation_typeController extends Controller
      */
     public function index()
     {
-        return view('Depreciation.index');
+        $assets=Asset::all();
+        return view('Depreciation.index',['assets' => $assets]);
     }
 
     /**

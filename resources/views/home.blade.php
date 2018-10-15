@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center" bgcolor="aqua">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header" >Dashboard</div>
 
@@ -36,7 +36,7 @@
                         <td><a href="{{route('vendor')}}"><button type="submit" class="btn btn-primary">
                                     {{ __('Vendor') }}
                                 </button></a></td>
-                        <td><a href="{{route('about')}}"><button type="submit" class="btn btn-primary">
+                        <td><a href="{{route('Depreciation')}}"><button type="submit" class="btn btn-primary">
                                     {{ __('Depreciation') }}
                                 </button></a></td><td><a href="{{route('about')}}"><button type="submit" class="btn btn-primary">
                                     {{ __('Models') }}
@@ -45,6 +45,7 @@
                                 </button></a></td>
 
                 </table>
+
             </div>
         </div>
     </div>

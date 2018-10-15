@@ -42,10 +42,10 @@ Route::get('/Vendors/index', 'Assets_vendorController@index')->name('vendor');;
 Route::get('/Class/index', 'Assets_classController@index')->name('category');
 //Route::get('/Assets/show', 'AssetsController@store')->name('assets');
 
+
+
+Route::get('/Depreciation/index', 'Depreciation_typeController@index')->name('Depreciation');
 Route::resource('assets','AssetsController');
-
-
-
 
 Route::resource('vendors','Assets_vendorController');
 Route::get('/Vendors.show', 'Assets_vendorController@show');

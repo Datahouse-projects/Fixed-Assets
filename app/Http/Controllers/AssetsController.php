@@ -54,19 +54,34 @@ class AssetsController extends Controller
 
        // return Redirect::route('admin.posts.index');
      $name=$request->input('name');
-      $cost=$request->input('cost');
-      $size=$request->input('size');
+      $manufacture=$request->input('manufacture');
+
+        $cost=$request->input('cost');
+        $model=$request->input('model');
+        $status=$request->input('status');
+        $condition=$request->input('condition');
+        $type=$request->input('type');
+        $expected=$request->input('expected');
+        $old=$request->input('old');
+        $size=$request->input('size');
         $rfid=$request->input('rfid');
         $barcode=$request->input('barcode');
         $serial=$request->input('serial');
         $purchase_date=$request->input('purchase_date');
         $expire_date=$request->input('expire_date');
-        $renewer_date=$request->input('renewer_date');
+         $renewer_date=$request->input('renewer_date');
           DB::table('assets')->insert(
 
         [      'name' => $name,
              'size' => $size,
              'cost' => $cost,
+            'model' => $model,
+            'status' => $status,
+            'manufacture' => $manufacture,
+            'condition' => $condition,
+            'type' => $type,
+            'expected' => $expected,
+            'old' => $old,
              'purchase_date' => $purchase_date,
              'expire_date' => $expire_date,
              'renewer_date' => $renewer_date,

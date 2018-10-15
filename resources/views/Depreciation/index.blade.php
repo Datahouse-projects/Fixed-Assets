@@ -1,71 +1,48 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-19">
                 <div class="card">
-                    <div class="card-header">{{ __('Depreciation Details') }}</div>
+                    <div align="left" class="card-header">{{ __('Asset Details') }}</div>
+                    <div align="Right" class="card-header">
 
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('register') }}">
-                            @csrf
-
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Asset Barcode') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                </div>
-                            </div>
-
-
-                            <div class="form-group row">
-                                <label for="size" class="col-md-4 col-form-label text-md-right">Asset RFID</label>
-                                <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Asset Serial No.') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="name" type="number" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
-
-                                </div>
-                            </div>
-
-
-
-
-                            <div class="form-group row mb-0">
-                                <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('Add Details') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
+
+
+                    <table class="table table-striped table-bordered table-hover">
+
+                        <tr >
+                            <td> Asset name</td>
+                            <td>Purchase Price</td>
+                            <td>Expected Life</td>
+                            <td>Manufacture</td>
+                            <td>Status</td>
+                        </tr>
+                        @foreach($assets as $assets)
+                            <tr>
+                                <td> {{ $assets->name }}</td>
+                                <td> {{ $assets->cost}}</td>
+                                <td> {{ $assets->expected}}</td>
+                                <td> {{ $assets->manufacture }}</td>
+                                <td> {{ $assets->status }}</td>
+                                <td>  <a href="{{route('assets.create')}}">Run Depreciation</a></td>
+                                <td> Delete</td>
+
+
+
+
+
+                            </tr>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
-
 
 
 @endsection
-
-
-
-
-
-
-
 
 
 
