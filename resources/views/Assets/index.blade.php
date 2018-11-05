@@ -18,7 +18,7 @@
 
                         <tr ><td>Serial No.</td>
                             <td> Asset name</td>
-                            <td>Asset Type</td>
+                            <td>Asset Class</td>
                             <td>cost</td>
                             <td>Manufacture</td>
                             <td>Status</td>

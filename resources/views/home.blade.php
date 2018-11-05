@@ -27,13 +27,13 @@
                                     {{ __('Assets') }}
                                 </button></a>
                                 </td>
-                        <td><a href="{{route('location')}}"><button type="submit" class="btn btn-primary">
-                                    {{ __('Location') }}
+                        <td><a href="{{route('locations.create')}}"><button type="submit" class="btn btn-primary">
+                                    {{ __('Locations') }}
                                 </button></a></td>
                         <td><a href="{{route('category')}}"><button type="submit" class="btn btn-primary">
-                                    {{ __('Category') }}
+                                    {{ __('Item Class') }}
                                 </button></a></td>
-                        <td><a href="{{route('vendor')}}"><button type="submit" class="btn btn-primary">
+                        <td><a href="{{route('vendors.create')}}"><button type="submit" class="btn btn-primary">
                                     {{ __('Vendor') }}
                                 </button></a></td>
                         <td><a href="{{route('Depreciation')}}"><button type="submit" class="btn btn-primary">

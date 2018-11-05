@@ -32,7 +32,7 @@
                                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Model') }}</label>
 
                                         <div class="col-md-2">
-                                            <input  type="number" class="form-control" name="model" >
+                                            <input  type="text" class="form-control" name="model" >
 
                                         </div>
                                     </div>
@@ -66,20 +66,26 @@
 
                                                     <div class="col-md-2">
                                                         <select name="type"  class="form-control">
-                                                            <option>Software</option>
-                                                            <option>poor</option>
-                                                            <option>new</option>
-                                                        </select>
-                                                    </div>
+                                                            <option>Buildings</option>
+                                                            <option>Plant and Machinery</option>
+                                                            <option>Funiture and Fittings</option>
+                                                            <option>Intangible</option>
+                                                            <option>Heavy Machine</option>
+                                                            <option>Computer and Data Eduipments</option>
+                                                            <option>Buildings of Permanent Nature</option>
 
-                                                </div>
+                                                         </select>
+
+                                                   </div>
+
+                                               </div>
 
 
 
-                            <div class="form-group row">
+                           <div class="form-group row">
                                 <label for="size" class="col-md-4 col-form-label text-md-right">Size</label>
                                 <div class="col-md-2">
-                                    <input name="size" type="number" class="form-control">
+                                    <input name="size" type="text" class="form-control">
 
                                 </div>
                             </div>
@@ -122,7 +128,7 @@
                                 <label for="rfid" class="col-md-4 col-form-label text-md-right">{{ __('Asset RFID') }}</label>
 
                                 <div class="col-md-2">
-                                    <input name="rfid" type="date" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  required autofocus>
+                                    <input name="rfid" type="number" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"  required autofocus>
 
                                 </div>
                             </div>
@@ -130,7 +136,7 @@
                                 <label for="barcode" class="col-md-4 col-form-label text-md-right">{{ __('Asset Barcode') }}</label>
 
                                 <div class="col-md-2">
-                                    <input name="barcode" type="date" class="form-control" required autofocus>
+                                    <input name="barcode" type="number" class="form-control" required autofocus>
 
                                 </div>
                             </div>
@@ -139,7 +145,7 @@
                                 <label for="serial" class="col-md-4 col-form-label text-md-right">{{ __('Asset Serial') }}</label>
 
                                 <div class="col-md-2">
-                                    <input name="serial" type="date" class="form-control" required autofocus>
+                                    <input name="serial" type="number" class="form-control" required autofocus>
 
                                 </div>
                             </div>
@@ -152,7 +158,8 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="serial" class="col-md-4 col-form-label text-md-right">{{ __("Old value") }}</label>
+                                <label for="serial" class="col-md-4 col-form-label text-md-right">{{ __("Salvage
+value") }}</label>
 
                                 <div class="col-md-2">
                                     <input name="old" type="number" class="form-control" required autofocus>

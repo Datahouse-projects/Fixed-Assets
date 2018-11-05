@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Asset;
 use App\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,8 +18,8 @@ class Assets_vendorController extends Controller
      */
     public function index()
     {
-        $vendors=Vendor::all();
-        return view('Vendors.index',['vendors' => $vendors]);
+      //  $vendors=Vendor::all();
+      //  return view('Vendors.index',['vendors' => $vendors]);
         //
     }
 
@@ -29,8 +30,9 @@ class Assets_vendorController extends Controller
      */
     public function create(Request $request)
     {
-        return view('Vendors.create');
-
+        $vendors=Vendor::all();
+        $assets = Asset::all();
+        return view('vendors.create', ['vendors' => $vendors],['assets' => $assets]);
     }
 
     /**
@@ -73,8 +75,10 @@ class Assets_vendorController extends Controller
 
 
         //$this->show();
-       // $vendors = Vendor::all();
-       // return view('Vendors.show', ['vendors' => $vendors]);
+       $vendors = Vendor::all();
+        $assets = Asset::all();
+        return view('vendors.show', ['vendors' => $vendors],['assets' => $assets]);
+
 
     }
 
@@ -88,9 +92,9 @@ class Assets_vendorController extends Controller
 
     {
 
-        return view ('Vendors.show');
-        // $assets = Asset::all();
-        // return view('Assets.show', ['assets' => $assets]);
+        $vendors = Vendor::all();
+        $assets = Asset::all();
+        return view('vendors.show', ['vendors' => $vendors],['assets' => $assets]);
 
 
 

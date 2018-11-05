@@ -23,7 +23,7 @@ class Assets_classController extends Controller
      */
     public function create()
     {
-        //
+        return view('Class.create');
     }
 
     /**

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Asset;
+use App\Location;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Asset_locationController extends Controller
 {
@@ -13,7 +16,9 @@ class Asset_locationController extends Controller
      */
     public function index()
     {
-        return view('Location.index');
+     $assets = Asset::all();
+        return view('Locations.index',['assets' => $assets]);
+
     }
 
     /**
@@ -23,7 +28,11 @@ class Asset_locationController extends Controller
      */
     public function create()
     {
-        return 'Location';
+       $locations=Location::all();
+        $assets = Asset::all();
+        return view('Locations.create',['locations' => $locations],['assets' => $assets]);
+
+
     }
 
     /**
@@ -34,9 +43,23 @@ class Asset_locationController extends Controller
      */
     public function store(Request $request)
     {
-        return 'Location';
-        //
+        $name=$request->input('name');
+        DB::table('locations')->insert(
+
+            [      'name' => $name,
+
+
+            ]
+
+
+        );
+        //$this->show();
+      $locations = Location::all();
+       //return view('Locations.create');
+      $assets = Asset::all();
+      return view('Locations.create', ['locations' => $locations],['assets' => $assets]);
     }
+
 
     /**
      * Display the specified resource.
@@ -47,6 +70,7 @@ class Asset_locationController extends Controller
     public function show($id)
     {
         //
+        return view ('Locations.index');
     }
 
     /**

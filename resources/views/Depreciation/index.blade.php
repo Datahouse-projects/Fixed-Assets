@@ -27,7 +27,7 @@
                                 <td> {{ $assets->expected}}</td>
                                 <td> {{ $assets->manufacture }}</td>
                                 <td> {{ $assets->status }}</td>
-                                <td>  <a href="{{route('assets.create')}}">Run Depreciation</a></td>
+                                <td>  <a href="{{route('dep')}}">Run Depreciation</a></td>
                                 <td> Delete</td>
 
 

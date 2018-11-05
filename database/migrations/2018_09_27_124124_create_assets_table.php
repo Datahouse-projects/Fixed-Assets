@@ -16,19 +16,19 @@ class CreateAssetsTable extends Migration
         Schema::create('assets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('size');
+            $table->string('size');
             $table->integer('cost');
             $table->date('purchase_date');
             $table->date('expire_date');
             $table->date('renewer_date');
-            $table->date('barcode');
-            $table->date('rfid');
-            $table->date('serial');
+            $table->integer('barcode')->nullable();
+            $table->integer('rfid')->nullable();
+            $table->integer('serial')->nullable();
             $table->string('manufacture');
-            $table->integer('model');
+            $table->string('model');
             $table->string('status');
             $table->string('condition');
-            $table->string('type');
+            $table->string('type')->nullable();
             $table->integer('old');
             $table->integer('expected');
 

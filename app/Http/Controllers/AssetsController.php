@@ -28,7 +28,8 @@ class AssetsController extends Controller
      */
     public function create(Request $request)
     {
-  return view('Assets.create');
+        $assets=Asset::all();
+       return view('Assets.create',['assets' => $assets]);
 
     }
 

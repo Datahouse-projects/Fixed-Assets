@@ -18,7 +18,14 @@ class CreateLocationsTable extends Migration
             $table->string('name');
             $table->timestamps();
         });
+
+
+        Schema::table('loacations',function(Blueprint $table){
+
+
+        });
     }
+
 
     /**
      * Reverse the migrations.

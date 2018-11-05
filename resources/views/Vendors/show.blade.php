@@ -13,13 +13,31 @@
 
                     <table class="table table-striped table-bordered table-hover">
 
+
                         <tr >
+                            <td>Asset name</td>
                             <td> Vendor name</td>
                             <td>Contacts</td>
                             <td>Email</td>
                             <td>Website</td>
 
                         </tr>
+
+                            @foreach($assets as $assets)
+                        <tr >
+
+                            <td>{{$assets->name}}</td>
+                            @endforeach
+                            @foreach($vendors as $vendors)
+                            <td>{{$vendors->name}}</td>
+                            <td>{{$vendors->phone}}</td>
+                            <td>{{$vendors->email}}l</td>
+                            <td>{{$vendors->website}}</td>
+
+                        </tr>
+
+
+                        @endforeach
 
                     </table>
                 </div>

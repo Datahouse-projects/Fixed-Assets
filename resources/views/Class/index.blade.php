@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div  ALIGN="CENTER" class="card-header">{{ __('ASSET CATEGORY') }}</div>
+                    <div  ALIGN="CENTER" class="card-header">{{ __('ASSET CLASSES') }}</div>
 
                     <div class="card-body">
                         <table class="table table-striped table-bordered table-hover">
@@ -28,6 +28,9 @@
                             </tr>
                             <tr >
                                 <td>Land and Buildings</td>
+                            </tr>
+                            <tr >
+                                <td>Intangible</td>
                             </tr>
 
 

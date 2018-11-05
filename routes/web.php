@@ -18,14 +18,14 @@ Route::get('/', function () {
 
 //return view('/Assets.index');
 
-Route::get("/assets",'AssetsController@show');
-Route::post("/assets",'AssetsController@store');
+//Route::get("/assets",'AssetsController@show');
+///Route::post("/assets",'AssetsController@store');
 
-Route::get('/Assets.show', 'AssetsController@show');
+//Route::get('/Assets.show', 'AssetsController@show');
 
 
 Route::resource('/models','Asset_modelController');
-Route::resource('/location','Asset_locationController');
+
 Route::resource('supervisors','SupervisorController');
 Route::resource('depreciation_historys','Depreciation_historyController');
 Route::resource('/services','Assets_serviceController');
@@ -37,19 +37,29 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home', 'AssetsController@index')->name('about');
-Route::get('/Location/index', 'Asset_locationController@index')->name('location');;
-Route::get('/Vendors/index', 'Assets_vendorController@index')->name('vendor');;
+
+//Route::get('/Vendors/index', 'Assets_vendorController@index')->name('vendor');;
 Route::get('/Class/index', 'Assets_classController@index')->name('category');
 //Route::get('/Assets/show', 'AssetsController@store')->name('assets');
 
-
+Route::get('/Deprection/index', 'Depreciation_typeController@show')->name('dep');
 
 Route::get('/Depreciation/index', 'Depreciation_typeController@index')->name('Depreciation');
+Route::get('/Depreciation/show', 'Depreciation_typeController@show');
 Route::resource('assets','AssetsController');
 
 Route::resource('vendors','Assets_vendorController');
-Route::get('/Vendors.show', 'Assets_vendorController@show');
-Route::get("/vendors.create",'Assets_vendorController@show');
-Route::post("/vendors.create",'Assets_vendorController@store');
+//Route::get('/Vendors.show', 'Assets_vendorController@show');
+Route::post("/vendors",'Assets_vendorController@store');
+Route::get("/vendors",'Assets_vendorController@create');
+
+Route::resource('locations','Asset_locationController');
+
+Route::post('/locations', 'Asset_locationController@store');
+Route::get('/locations', 'Asset_locationController@create');
+
+
+
+Route::get('/Class/create', 'Assets_classController@create')->name('category');
 
 
